@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "generatedAt": "2026-07-21T17:20:00.000Z",
+    "cutoffDate": "2026-06-30",
+    "currency": "COP",
+    "entityName": "Entidad Demo S.A.S.",
+    "accountLabel": "Banco Demo · 001",
+    "accountingFiles": ["auxiliar_demo.csv"],
+    "bankFiles": ["extracto_demo.csv"],
+    "methodology": "Prueba de humo"
+  },
+  "executiveSummary": "Los saldos ajustados coinciden, sujeto a revisión de soportes.",
+  "metrics": {
+    "bookBalance": 1000,
+    "bankBalance": 1000,
+    "adjustedBookBalance": 1000,
+    "adjustedBankBalance": 1000,
+    "differenceBefore": 0,
+    "differenceAfter": 0,
+    "matchedAmount": 1000,
+    "matchedCount": 1,
+    "unmatchedBookAmount": 0,
+    "unmatchedBookCount": 0,
+    "unmatchedBankAmount": 0,
+    "unmatchedBankCount": 0,
+    "reconciliationRate": 100
+  },
+  "matches": [
+    {
+      "id": "M-1",
+      "bookTransactionIds": ["L-1"],
+      "bankTransactionIds": ["B-1"],
+      "amount": 1000,
+      "matchType": "exact",
+      "confidence": 0.99,
+      "explanation": "Valor y fecha coinciden."
+    }
+  ],
+  "unmatchedBook": [],
+  "unmatchedBank": [],
+  "findings": [],
+  "adjustments": [],
+  "controls": [
+    { "id": "C-1", "name": "Igualdad de saldos", "status": "pass", "note": "Los saldos ajustados coinciden." }
+  ],
+  "scopeLimitations": ["Prueba de exportación."],
+  "legalContext": ["La conciliación requiere revisión humana."]
+}

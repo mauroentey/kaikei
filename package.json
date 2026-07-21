@@ -1,0 +1,96 @@
+{
+  "name": "kaikei-conciliacion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aplicación de escritorio para conciliación bancaria asistida por Codex App Server.",
+  "type": "module",
+  "main": "electron/main.mjs",
+  "author": {
+    "name": "Mauricio Samper",
+    "email": "mauro@entey.net"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:electron": "electron scripts/electron-smoke.mjs",
+    "test:watch": "vitest",
+    "verify": "npm run typecheck && npm run test && npm run build",
+    "dist": "npm run verify && electron-builder",
+    "dist:mac": "npm run verify && electron-builder --mac",
+    "dist:win": "npm run verify && electron-builder --win"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "lucide-react": "1.25.0",
+    "papaparse": "5.5.4",
+    "pdfjs-dist": "6.1.200",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "recharts": "3.10.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.1",
+    "@types/node": "24.10.1",
+    "@types/papaparse": "5.3.16",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.3",
+    "concurrently": "9.2.4",
+    "cross-env": "10.1.0",
+    "electron": "43.2.0",
+    "electron-builder": "26.15.3",
+    "jsdom": "27.4.0",
+    "typescript": "7.0.2",
+    "vite": "8.1.5",
+    "vitest": "4.1.10",
+    "wait-on": "9.0.3"
+  },
+  "overrides": {
+    "uuid": "11.1.1"
+  },
+  "build": {
+    "appId": "co.kaikei.conciliacion",
+    "productName": "Kaikei",
+    "copyright": "Copyright © 2026 Mauricio Samper · Bogotá, Colombia",
+    "asar": true,
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "assets/icon.png",
+      "LICENSE",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.finance",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64", "x64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}
