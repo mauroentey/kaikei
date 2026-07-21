@@ -1,5 +1,7 @@
 # Kaikei
 
+[English version](README.en.md)
+
 Aplicación Electron para macOS y Windows que concilia un auxiliar contable contra uno o varios extractos bancarios. Usa la sesión de ChatGPT mediante **Codex App Server**; no solicita una API key.
 
 > Creado y mantenido por **Mauricio Samper** — Bogotá, Colombia<br>
@@ -8,6 +10,24 @@ Aplicación Electron para macOS y Windows que concilia un auxiliar contable cont
 <p align="center">
   <img src="assets/logo-kaikei.png" alt="Logo de Kaikei" width="180">
 </p>
+
+## OpenAI Build Week 2026
+
+**Track:** Work & Productivity<br>
+**Tagline:** From two financial records to one trusted answer.<br>
+**Submission draft:** [Elevator pitch, Devpost story and demo script](docs/BUILDWEEK_SUBMISSION.md)
+
+Kaikei was created during OpenAI Build Week from a plain-language accounting workflow. It is a working Electron product—not a chat mockup—with local financial-file parsing, deterministic reconciliation, GPT-5.6 exception analysis, schema-constrained output, dashboards and exportable reports.
+
+### How I collaborated with Codex and GPT-5.6
+
+Codex was the engineering collaborator throughout the project. It helped research the Colombian reconciliation context, turn the workflow into requirements, design the Electron and Codex App Server architecture, implement file parsers and matching logic, build the product interface, write automated tests, debug the packaged application, generate installers and prepare the documentation.
+
+Mauricio Samper made the key product decisions: reuse the user's ChatGPT session instead of requiring an API key; keep file parsing local; use deterministic rules for arithmetic and matching; reserve GPT-5.6 for ambiguous exceptions and findings; and keep every proposed adjustment subject to human evidence, review and approval.
+
+Inside the product, GPT-5.6 runs through `codex app-server` in an ephemeral read-only thread. The model receives normalized movements and deterministic candidates, and its final report must satisfy `turn/start.outputSchema`; Zod validates it again before the UI or exporters can consume it.
+
+Judges can use the included sample files [`fixtures/auxiliar_demo.csv`](fixtures/auxiliar_demo.csv) and [`fixtures/extracto_demo.csv`](fixtures/extracto_demo.csv). The dated commit history and the main Codex thread document the work completed during the Build Week submission period.
 
 ## Qué incluye
 
