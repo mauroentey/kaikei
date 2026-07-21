@@ -6,6 +6,7 @@
 - **Track:** Work & Productivity
 - **Tagline:** From two financial records to one trusted answer.
 - **Repository:** https://github.com/mauroentey/kaikei
+- **Evaluation builds:** https://github.com/mauroentey/kaikei/releases/tag/v0.1.0
 - **Built by:** Mauricio Samper — Bogotá, Colombia
 - **Contact:** mauro@entey.net
 - **Technologies:** Codex, GPT-5.6, Codex App Server, Electron, React, TypeScript, Vite, Zod, Recharts, ExcelJS and PDF.js
@@ -156,8 +157,7 @@ End on the logo and repository URL.
 - [x] Include setup instructions, sample data and screenshots in the README.
 - [x] Document how Codex accelerated the work and where Mauricio made the key decisions.
 - [ ] Run `/feedback` in the main Codex project thread and confirm the session ID before pasting it into Devpost.
-- [ ] Provide judges with a downloadable/testable build or clear source-testing instructions.
+- [x] Provide judges with a downloadable/testable build and clear source-testing instructions.
 - [ ] Confirm that the repository license permits Build Week judges to download and test the project during judging.
 - [ ] Check that the submission does not expose real financial or personal data.
 - [ ] Submit before July 21, 2026 at 5:00 p.m. PT / 7:00 p.m. Bogotá time.
-
