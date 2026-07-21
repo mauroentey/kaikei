@@ -29,7 +29,7 @@ Mauricio Samper tomó las decisiones clave: reutilizar la sesión de ChatGPT del
 
 Codex también forma parte del producto terminado. Kaikei ejecuta GPT-5.6 mediante `codex app-server` en un thread efímero y de solo lectura. El modelo recibe movimientos normalizados y candidatos determinísticos; su reporte final debe cumplir `turn/start.outputSchema`, y Zod vuelve a validarlo antes de que la interfaz o los exportadores puedan consumirlo.
 
-Judges can use the included sample files [`fixtures/auxiliar_demo.csv`](fixtures/auxiliar_demo.csv) and [`fixtures/extracto_demo.csv`](fixtures/extracto_demo.csv). The dated commit history and the main Codex thread document the work completed during the Build Week submission period.
+Los jueces pueden usar los dos XLSX sintéticos incluidos: [`auxiliar_contable_sintetico_kaikei.xlsx`](outputs/019f86b6-372d-7103-912c-6632663ce348/auxiliar_contable_sintetico_kaikei.xlsx) y [`extracto_bancario_sintetico_kaikei.xlsx`](outputs/019f86b6-372d-7103-912c-6632663ce348/extracto_bancario_sintetico_kaikei.xlsx). Contienen 30 y 31 movimientos ficticios, respectivamente, con cruces directos, tres agrupaciones, una diferencia de valor, un duplicado, comisión bancaria, GMF, intereses, consignación en tránsito y cheque pendiente. El historial de commits y el thread principal de Codex documentan el trabajo realizado durante el periodo de Build Week.
 
 ## Qué incluye
 

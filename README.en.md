@@ -69,10 +69,12 @@ npm install
 npm run dev
 ```
 
-Use these included sample files when starting a reconciliation:
+Use these richer synthetic XLSX files when starting a reconciliation:
 
-- Accounting ledger: [`fixtures/auxiliar_demo.csv`](fixtures/auxiliar_demo.csv)
-- Bank statement: [`fixtures/extracto_demo.csv`](fixtures/extracto_demo.csv)
+- Accounting ledger: [`auxiliar_contable_sintetico_kaikei.xlsx`](outputs/019f86b6-372d-7103-912c-6632663ce348/auxiliar_contable_sintetico_kaikei.xlsx)
+- Bank statement: [`extracto_bancario_sintetico_kaikei.xlsx`](outputs/019f86b6-372d-7103-912c-6632663ce348/extracto_bancario_sintetico_kaikei.xlsx)
+
+They contain 30 and 31 fictional movements with direct matches, three grouped matches, a value discrepancy, a duplicate, bank fees, GMF tax, interest, a deposit in transit and an outstanding check.
 
 A populated visual state can also be opened without submitting data to a model:
 
@@ -139,4 +141,3 @@ Kaikei helps prepare and document a bank reconciliation. It does not post journa
 Copyright © 2026 Mauricio Samper, Bogotá, Colombia. All rights reserved.
 
 This repository grants no right to use, modify or redistribute the project except with the author's express written permission. For licensing or collaboration, contact [mauro@entey.net](mailto:mauro@entey.net).
-
