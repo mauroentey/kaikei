@@ -19,13 +19,15 @@ Aplicación Electron para macOS y Windows que concilia un auxiliar contable cont
 
 Kaikei was created during OpenAI Build Week from a plain-language accounting workflow. It is a working Electron product—not a chat mockup—with local financial-file parsing, deterministic reconciliation, GPT-5.6 exception analysis, schema-constrained output, dashboards and exportable reports.
 
-### How I collaborated with Codex and GPT-5.6
+### Cómo usamos Codex para crear Kaikei
 
-Codex was the engineering collaborator throughout the project. It helped research the Colombian reconciliation context, turn the workflow into requirements, design the Electron and Codex App Server architecture, implement file parsers and matching logic, build the product interface, write automated tests, debug the packaged application, generate installers and prepare the documentation.
+Codex fue el colaborador de ingeniería durante todo el proyecto. Partimos de una descripción en lenguaje natural del proceso de conciliación bancaria y trabajamos de forma iterativa: Mauricio definía el problema, las restricciones contables y las decisiones de producto; Codex inspeccionaba el repositorio, proponía el siguiente cambio, implementaba el código y verificaba el resultado con pruebas, typecheck y builds ejecutables.
 
-Mauricio Samper made the key product decisions: reuse the user's ChatGPT session instead of requiring an API key; keep file parsing local; use deterministic rules for arithmetic and matching; reserve GPT-5.6 for ambiguous exceptions and findings; and keep every proposed adjustment subject to human evidence, review and approval.
+En concreto, usamos Codex para investigar el contexto colombiano de conciliación, convertir el flujo contable en requisitos, diseñar la arquitectura con Electron y Codex App Server, implementar los parsers y el motor de cruces, construir la interfaz, escribir pruebas automatizadas, diagnosticar fallos de la aplicación empaquetada, generar instaladores y preparar la documentación y los materiales de la demo.
 
-Inside the product, GPT-5.6 runs through `codex app-server` in an ephemeral read-only thread. The model receives normalized movements and deterministic candidates, and its final report must satisfy `turn/start.outputSchema`; Zod validates it again before the UI or exporters can consume it.
+Mauricio Samper tomó las decisiones clave: reutilizar la sesión de ChatGPT del usuario en vez de pedir una API key; mantener el procesamiento de archivos local; usar reglas determinísticas para la aritmética y los cruces; reservar GPT-5.6 para excepciones ambiguas y hallazgos; y exigir evidencia, revisión y aprobación humana para cada ajuste sugerido. Codex aceleró la investigación, la implementación y la validación, sin reemplazar esas decisiones de producto ni el criterio contable.
+
+Codex también forma parte del producto terminado. Kaikei ejecuta GPT-5.6 mediante `codex app-server` en un thread efímero y de solo lectura. El modelo recibe movimientos normalizados y candidatos determinísticos; su reporte final debe cumplir `turn/start.outputSchema`, y Zod vuelve a validarlo antes de que la interfaz o los exportadores puedan consumirlo.
 
 Judges can use the included sample files [`fixtures/auxiliar_demo.csv`](fixtures/auxiliar_demo.csv) and [`fixtures/extracto_demo.csv`](fixtures/extracto_demo.csv). The dated commit history and the main Codex thread document the work completed during the Build Week submission period.
 
