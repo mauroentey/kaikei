@@ -5,7 +5,9 @@ Aplicación Electron para macOS y Windows que concilia un auxiliar contable cont
 > Creado y mantenido por **Mauricio Samper** — Bogotá, Colombia<br>
 > Contacto: [mauro@entey.net](mailto:mauro@entey.net)
 
-![Kaikei](assets/icon.png)
+<p align="center">
+  <img src="assets/logo-kaikei.png" alt="Logo de Kaikei" width="180">
+</p>
 
 ## Qué incluye
 

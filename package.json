@@ -61,7 +61,7 @@
     "files": [
       "dist/**/*",
       "electron/**/*",
-      "assets/icon.png",
+      "assets/logo-kaikei.png",
       "LICENSE",
       "package.json"
     ],
@@ -70,7 +70,7 @@
     },
     "mac": {
       "category": "public.app-category.finance",
-      "icon": "assets/icon.icns",
+      "icon": "assets/logo-kaikei.icns",
       "target": [
         {
           "target": "dmg",
@@ -79,7 +79,7 @@
       ]
     },
     "win": {
-      "icon": "assets/icon.ico",
+      "icon": "assets/logo-kaikei.ico",
       "target": [
         {
           "target": "nsis",

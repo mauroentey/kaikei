@@ -24,7 +24,7 @@ app.setAboutPanelOptions({
   copyright: "© 2026 Mauricio Samper · Bogotá, Colombia",
   credits: "Conciliación bancaria asistida por Codex\nContacto: mauro@entey.net",
   website: "mailto:mauro@entey.net",
-  iconPath: path.join(__dirname, "..", "assets", "icon.png"),
+  iconPath: path.join(__dirname, "..", "assets", "logo-kaikei.png"),
 });
 
 async function loadSettings() {

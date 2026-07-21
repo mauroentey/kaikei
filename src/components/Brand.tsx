@@ -1,9 +1,9 @@
-import { Landmark } from "lucide-react";
+import logoMark from "../../assets/logo-kaikei.png";
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`brand ${compact ? "brand--compact" : ""}`}>
-      <span className="brand__mark"><Landmark size={compact ? 17 : 21} strokeWidth={2.2} /></span>
+      <span className="brand__mark"><img src={logoMark} alt="" /></span>
       <span className="brand__name">Kaikei</span>
       {!compact && <span className="brand__tag">Conciliación inteligente</span>}
     </div>

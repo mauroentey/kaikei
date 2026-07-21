@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Kaikei</title>
+  <desc id="desc">Dos documentos contables conciliados mediante un visto bueno.</desc>
+  <rect width="1024" height="1024" rx="220" fill="#0B4A3F"/>
+  <path d="M184 270 416 404v172l-50 46 50 42v168L184 754Z" fill="#F7F3E8"/>
+  <path d="m840 270-232 134v172l50 46-50 42v168l232-78Z" fill="#2F8C78"/>
+  <g fill="#0B4A3F">
+    <rect x="230" y="438" width="132" height="28" rx="5"/>
+    <rect x="230" y="548" width="132" height="28" rx="5"/>
+    <rect x="230" y="658" width="132" height="28" rx="5"/>
+    <rect x="662" y="438" width="132" height="28" rx="5"/>
+    <rect x="662" y="548" width="132" height="28" rx="5"/>
+    <rect x="662" y="658" width="132" height="28" rx="5"/>
+  </g>
+  <path d="m414 608 91 91 154-154 54 54-208 208-145-145Z" fill="#D7B66A"/>
+</svg>
