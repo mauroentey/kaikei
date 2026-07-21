@@ -121,7 +121,7 @@ Open Kaikei and click **Iniciar conciliación**.
 
 “I load one accounting ledger on the left and one or more bank statements on the right. Kaikei reads XLSX, CSV, OFX, QFX and PDF locally, detects the columns, and lets me confirm the account, cut-off date and matching criteria.”
 
-Load `fixtures/auxiliar_demo.csv` and `fixtures/extracto_demo.csv`.
+Load `outputs/019f86b6-372d-7103-912c-6632663ce348/auxiliar_contable_sintetico_kaikei.xlsx` and `outputs/019f86b6-372d-7103-912c-6632663ce348/extracto_bancario_sintetico_kaikei.xlsx`. The controlled exceptions make the grouped matches, $1,000 value discrepancy, duplicate, bank charges, interest, deposit in transit and outstanding check easy to demonstrate.
 
 **1:05–1:35 — Hybrid analysis**
 
