@@ -135,8 +135,10 @@ http://127.0.0.1:5173/?demo=results
 
 También están disponibles `?demo=home`, `?demo=files` y `?demo=processing`.
 
-## Autor y derechos
+## Licencia
 
-Copyright © 2026 Mauricio Samper, Bogotá, Colombia. Todos los derechos reservados.
+Copyright © 2026 Mauricio Samper, Bogotá, Colombia.
 
-Este repositorio no concede una licencia de uso, modificación o redistribución salvo autorización expresa y escrita del autor. Para licenciamiento o colaboración escribe a [mauro@entey.net](mailto:mauro@entey.net).
+Kaikei es software open source publicado bajo la **GNU Affero General Public License v3.0 únicamente** (`AGPL-3.0-only`). Puedes usarlo, estudiarlo, modificarlo y distribuirlo —también con fines comerciales— siempre que cumplas las condiciones de la licencia. Si distribuyes una versión modificada o permites que usuarios interactúen con ella a través de una red, debes ofrecer el código fuente correspondiente bajo la misma licencia.
+
+Consulta el texto legal completo en [LICENSE](LICENSE). Si necesitas integrar Kaikei en un producto propietario sin las obligaciones de la AGPL, solicita una licencia comercial a [mauro@entey.net](mailto:mauro@entey.net).

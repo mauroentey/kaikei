@@ -9,7 +9,7 @@
     "name": "Mauricio Samper",
     "email": "mauro@entey.net"
   },
-  "license": "UNLICENSED",
+  "license": "AGPL-3.0-only",
   "scripts": {
     "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on tcp:5173 && cross-env VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .\"",
     "build": "vite build",

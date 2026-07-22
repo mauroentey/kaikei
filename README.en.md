@@ -136,8 +136,10 @@ Kaikei helps prepare and document a bank reconciliation. It does not post journa
 - The UI requires consent before normalized movements are sent to Codex.
 - Each file is limited to 25 MB and 15,000 rows.
 
-## Author and rights
+## License
 
-Copyright © 2026 Mauricio Samper, Bogotá, Colombia. All rights reserved.
+Copyright © 2026 Mauricio Samper, Bogotá, Colombia.
 
-This repository grants no right to use, modify or redistribute the project except with the author's express written permission. For licensing or collaboration, contact [mauro@entey.net](mailto:mauro@entey.net).
+Kaikei is open-source software released under the **GNU Affero General Public License v3.0 only** (`AGPL-3.0-only`). You may use, study, modify and distribute it —including commercially— provided that you comply with the license. If you distribute a modified version or let users interact with it over a network, you must offer the corresponding source code under the same license.
+
+See [LICENSE](LICENSE) for the complete legal terms. If you need to integrate Kaikei into a proprietary product without the AGPL obligations, request a commercial license at [mauro@entey.net](mailto:mauro@entey.net).
